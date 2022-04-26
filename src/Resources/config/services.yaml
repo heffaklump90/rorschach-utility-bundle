@@ -1,0 +1,5 @@
+services:
+    Rorschach\UtilityBundle\EventListener\TimestampListener:
+        tags:
+            - { name: 'doctrine.event_listener', event: 'prePersist' }
+            - { name: 'doctrine.event_listener', event: 'preUpdate' }
