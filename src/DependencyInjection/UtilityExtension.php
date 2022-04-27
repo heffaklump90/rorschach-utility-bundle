@@ -21,4 +21,9 @@ class UtilityExtension extends Extension
         $definition = $container->getDefinition('utility.timestamp_listener');
         //$definition->replaceArgument(0, $config['timestamp']['timezone']);
     }
+
+    public function getAlias(): string
+    {
+        return 'utility';
+    }
 }
