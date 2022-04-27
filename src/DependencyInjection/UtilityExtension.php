@@ -19,7 +19,9 @@ class UtilityExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $definition = $container->getDefinition('utility.timestamp');
+        $config = $config;
+
+        //$definition = $container->getDefinition('utility.timestamp');
 
     }
 }
