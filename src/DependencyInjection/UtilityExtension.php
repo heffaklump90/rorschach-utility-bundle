@@ -12,8 +12,8 @@ class UtilityExtension extends Extension
 
     public function load(array $configs, ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-        //$loader->load('services.yaml');
+        $loader = new YamlFileLoader($container, new FileLocator('@UtilityBundle/Resources/config'));
+        $loader->load('services.yaml');
         $loader->load('utility.yaml');
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
@@ -22,8 +22,4 @@ class UtilityExtension extends Extension
         //$definition->replaceArgument(0, $config['timestamp']['timezone']);
     }
 
-    public function getAlias(): string
-    {
-        return 'utility';
-    }
 }
