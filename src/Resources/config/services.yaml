@@ -1,7 +1,8 @@
 services:
-    Rorschach\UtilityBundle\EventListener\TimestampListener:
+    utility.timestamp_listener:
+        class: Rorschach\UtilityBundle\EventListener\TimestampListener
+        arguments:
+            $parameterBag: "@parameter_bag"
         tags:
             - { name: 'doctrine.event_listener', event: 'prePersist' }
             - { name: 'doctrine.event_listener', event: 'preUpdate' }
-    utility.timestamp_listener:
-        class: Rorschach\UtilityBundle\EventListener\TimestampListener
