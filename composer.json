@@ -1,25 +1,25 @@
 {
-  "name": "rorschach/utility-bundle",
-  "description": "utility functionality",
-  "minimum-stability": "dev",
-  "type": "symfony-bundle",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Björn Andersson",
-      "email": "bjoern.andersson4711@gmail.com"
+    "name": "rorschach/utility-bundle",
+    "description": "utility functionality",
+    "minimum-stability": "dev",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Björn Andersson",
+            "email": "bjoern.andersson4711@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "symfony/framework-bundle": "^6.0",
+        "symfony/http-foundation": "^6.0",
+        "doctrine/doctrine-bundle": "^2",
+        "doctrine/orm": "^2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rorschach\\UtilityBundle\\": "src/"
+        }
     }
-  ],
-  "require": {
-    "php": ">=8.0",
-    "symfony/framework-bundle": "^6.0",
-    "symfony/http-foundation": "^6.0",
-    "doctrine/doctrine-bundle": "^2",
-    "doctrine/orm": "^2"
-  },
-  "autoload": {
-    "psr-4": {
-      "Rorschach\\UtilityBundle\\": "src/"
-    }
-  }
 }

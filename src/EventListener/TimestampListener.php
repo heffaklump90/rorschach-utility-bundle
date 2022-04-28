@@ -14,10 +14,7 @@ class TimestampListener
     public function __construct(ParameterBagInterface $parameterBag)
     {
         $this->parameterBag = $parameterBag;
-        $this->timezone = $this->parameterBag->get('utility.timestamp.timezone');
-        if(!$this->timezone){
-            $this->timezone = 'Europe/Berlin';
-        }
+        $this->timezone = $this->parameterBag->get('utility');
     }
 
 
