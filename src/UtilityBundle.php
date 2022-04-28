@@ -13,6 +13,15 @@ class UtilityBundle extends Bundle
 {
     public function getContainerExtension(): ?ExtensionInterface
     {
-        return new UtilityExtension();
+        if(null === $this->extension) {
+            $this->extension =  new UtilityExtension();
+        }
+        return $this->extension;
     }
+
+    public function getAlias(): string
+    {
+        return 'utility';
+    }
+
 }

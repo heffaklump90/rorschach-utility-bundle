@@ -16,7 +16,7 @@ class Configuration  implements ConfigurationInterface
             ->children()
                 ->arrayNode('timestamp')
                     ->children()
-                        ->scalarNode('timezone')
+                        ->scalarNode('timezone')->defaultValue('Europe/Berlin')
                     ->end()
                 ->end()
             ->end()
