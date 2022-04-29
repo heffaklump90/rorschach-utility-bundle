@@ -16,9 +16,12 @@ class UtilityExtension extends Extension
         $loader->load('services.yaml');
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-
-        $definition = $container->getDefinition('utility.timestamp_listener');
-        //$definition->replaceArgument(0, $config['timestamp']['timezone']);
+        $container->setParameter('utility.timestamp.timezone', $config['timestamp']['timezone']);
     }
+
+//    public function getConfiguration(array $config, ContainerBuilder $container)
+//    {
+//        return new Configuration();
+//    }
 
 }
