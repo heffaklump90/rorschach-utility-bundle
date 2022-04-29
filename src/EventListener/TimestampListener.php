@@ -14,7 +14,7 @@ class TimestampListener
     public function __construct(ParameterBagInterface $parameterBag)
     {
         $this->parameterBag = $parameterBag;
-        $this->timezone = $this->parameterBag->get('utility');
+        $this->timezone = $this->parameterBag->get('utility.timestamp.timezone');
     }
 
 

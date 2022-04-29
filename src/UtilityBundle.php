@@ -11,17 +11,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class UtilityBundle extends Bundle
 {
-    public function getContainerExtension(): ?ExtensionInterface
-    {
-        if(null === $this->extension) {
-            $this->extension =  new UtilityExtension();
-        }
-        return $this->extension;
-    }
 
-    public function getAlias(): string
-    {
-        return 'utility';
-    }
 
 }

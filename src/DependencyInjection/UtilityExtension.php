@@ -19,9 +19,4 @@ class UtilityExtension extends Extension
         $container->setParameter('utility.timestamp.timezone', $config['timestamp']['timezone']);
     }
 
-//    public function getConfiguration(array $config, ContainerBuilder $container)
-//    {
-//        return new Configuration();
-//    }
-
 }
