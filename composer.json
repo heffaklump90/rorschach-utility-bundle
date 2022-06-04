@@ -15,8 +15,7 @@
         "symfony/framework-bundle": "v6.1.0",
         "symfony/http-foundation": "v6.1.0",
         "doctrine/doctrine-bundle": "^2",
-        "doctrine/orm": "^2",
-        "symfony/form": "v6.1.0"
+        "doctrine/orm": "^2"
     },
     "autoload": {
         "psr-4": {
