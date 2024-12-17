@@ -17,11 +17,15 @@ class UtilityBundle extends AbstractBundle
     {
         $definition->rootNode()
             ->children()
-            ->arrayNode('timestamp')
-            ->children()
-            ->scalarNode('timezone')->defaultValue('Europe/Berlin')->end()
-            ->end()
-            ->end()
+                ->arrayNode('utility')
+                    ->children()
+                        ->arrayNode('timestamp')
+                            ->children()
+                                ->scalarNode('timezone')->defaultValue('Europe/Berlin')->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end();
     }
 
@@ -30,8 +34,8 @@ class UtilityBundle extends AbstractBundle
         $container->import('../config/services.yaml');
 
         $container->services()
-            ->get('timestamp.timezone')
-            ->arg(0, $config['timestamp']['timezone']);
+            ->get('utility.timestamp.timezone')
+            ->arg(0, $config['utility']['timestamp']['timezone']);
     }
 
 }
