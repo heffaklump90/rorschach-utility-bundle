@@ -1,6 +1,8 @@
 <?php
 
 
+namespace Rorschach\UtilityBundle;
+
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
@@ -11,17 +13,16 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
  */
 class UtilityBundle extends AbstractBundle
 {
-    public function configure(DefinitionConfigurator $definition):void
+    public function configure(DefinitionConfigurator $definition): void
     {
         $definition->rootNode()
             ->children()
-                ->arrayNode('timestamp')
-                    ->children()
-                        ->scalarNode('timezone')->defaultValue('Europe/Berlin')->end()
-                    ->end()
-                ->end()
+            ->arrayNode('timestamp')
+            ->children()
+            ->scalarNode('timezone')->defaultValue('Europe/Berlin')->end()
             ->end()
-        ;
+            ->end()
+            ->end();
     }
 
     public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
@@ -30,8 +31,7 @@ class UtilityBundle extends AbstractBundle
 
         $container->services()
             ->get('timestamp.timezone')
-            ->arg(0, $config['timestamp']['timezone'])
-        ;
+            ->arg(0, $config['timestamp']['timezone']);
     }
 
 }
